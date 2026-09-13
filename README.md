@@ -24,9 +24,23 @@ Arithmetic and comparison operators
 
 Native Windows GUI support
 
-Button click events
+GUI event callbacks
 
-x86 64 Assembly based compiler and runtime
+Networking
+
+HTTP GET requests
+
+HTML parsing
+
+CSS color handling
+
+HTML block rendering
+
+Widget manipulation
+
+Standalone executable building
+
+x86-64 Assembly based compiler and runtime
 
 Example
 fn fib(n) {
