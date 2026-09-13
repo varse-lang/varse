@@ -20,6 +20,3 @@ fn main() {
     let b = bigger(2 + 9);
     print(count_up((b + 1)));
 }
-// variables, assignment, and mutation
-// shows let, re-assignment with =, nested functions
-// a function can change a variable it can see
