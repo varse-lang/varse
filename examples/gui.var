@@ -1,0 +1,24 @@
+fn main() {
+    window "Varse GUI Demo" 600 400 bg=#222222;
+
+    label lbl1 20 20 300 40 "Hello from Varse!";
+    label lbl2 20 70 400 40 "Click a button below";
+
+    button btn1 20 130 180 50 "Print Number" radius=10 color=#CC4422;
+    button btn2 220 130 180 50 "Say Hello" radius=10 color=#226644;
+    button btn3 20 200 180 50 "Big Radius" radius=25 color=#4444CC;
+
+    onclick btn1 {
+        print(42);
+    };
+
+    onclick btn2 {
+        print(100);
+    };
+
+    onclick btn3 {
+        print(999);
+    };
+
+    show;
+}

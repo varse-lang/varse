@@ -1,0 +1,27 @@
+// Varse stage 0 - nested functions and the + operator
+// in fn add(x + y), the + separates the two params
+
+def base: 10;
+
+fn main() {
+    fn add(x + y) {
+        return x + y;
+    }
+
+    fn sub(x + y) {
+        return x - y;
+    }
+
+    fn mul(x + y) {
+        return x * y;
+    }
+
+    // notice the call style: add(40 + 2) passes 40 and 2
+    let sum = add(40 + 2);
+    let diff = sub(sum + 12);
+    let product = mul(diff + 2);
+
+    print(sum);
+    print(diff);
+    print(product);
+}

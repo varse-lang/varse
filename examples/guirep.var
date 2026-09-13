@@ -1,0 +1,100 @@
+fn main() {
+    window "Spotify" 1400 850 bg=#121212;
+
+    label lbl_spotify_logo 18 18 40 40 "S" color=#1DB954;
+
+    button btn_back 40 18 32 32 "" color=#181818 radius=16;
+    label lbl_back 49 22 16 24 "<" color=#B3B3B3;
+
+    button btn_fwd 80 18 32 32 "" color=#181818 radius=16;
+    label lbl_fwd 89 22 16 24 ">" color=#B3B3B3;
+
+    button btn_search 128 18 380 36 "" color=#242424 radius=18;
+    label lbl_search 148 24 340 24 "What are you looking for?" color=#B3B3B3;
+
+    label lbl_premium 560 24 60 24 "Premium" color=#FFFFFF;
+    label lbl_support 630 24 60 24 "Support" color=#FFFFFF;
+    label lbl_download 700 24 80 24 "Download" color=#FFFFFF;
+
+    label lbl_install 1100 24 80 24 "Install App" color=#FFFFFF;
+
+    button btn_signup 1200 18 80 32 "Sign up" color=#FFFFFF radius=16;
+    button btn_login 1300 18 80 32 "Log in" color=#FFFFFF radius=16;
+
+    button btn_sidebar 10 74 330 770 "" color=#121212 radius=8;
+
+    label lbl_yourlibrary 24 86 120 28 "Your Library" color=#FFFFFF;
+
+    button btn_plus 310 86 28 28 "+" color=#B3B3B3 radius=14;
+
+    button btn_create_card 24 130 306 180 "" color=#242424 radius=8;
+    label lbl_create_title 40 142 280 30 "Create your first playlist" color=#FFFFFF;
+    label lbl_create_sub 40 178 280 24 "It's easy, we'll help you" color=#B3B3B3;
+    button btn_create_playlist 40 212 140 36 "Create playlist" color=#FFFFFF radius=18;
+
+    button btn_podcast_card 24 326 306 180 "" color=#242424 radius=8;
+    label lbl_podcast_title 40 338 280 48 "Let's find some podcasts to follow" color=#FFFFFF;
+    label lbl_podcast_sub 40 394 280 24 "We'll keep you updated on new episodes" color=#B3B3B3;
+
+    label lbl_legal 24 530 48 20 "Legal" color=#A7A7A7;
+    label lbl_safety 24 554 140 20 "Safety & Privacy Center" color=#A7A7A7;
+    label lbl_privacy 24 578 96 20 "Privacy Policy" color=#A7A7A7;
+    label lbl_cookies 128 578 60 20 "Cookies" color=#A7A7A7;
+    label lbl_aboutads 198 578 80 20 "About Ads" color=#A7A7A7;
+    label lbl_access 24 602 88 20 "Accessibility" color=#A7A7A7;
+    label lbl_notice 120 602 140 20 "Notice at Collection" color=#A7A7A7;
+    label lbl_yourprivacy 24 626 150 20 "Your Privacy Choices" color=#A7A7A7;
+
+    button btn_english 24 660 100 36 "English" color=#242424 radius=18;
+
+    label lbl_trending 360 86 200 40 "Trending songs" color=#FFFFFF;
+
+    button btn_album1 360 136 180 270 "" color=#181818 radius=8;
+    label lbl_song1 368 340 164 24 "So Good" color=#FFFFFF;
+    label lbl_artist1 368 364 164 20 "Jhene Aiko" color=#B3B3B3;
+
+    button btn_album2 556 136 180 270 "" color=#181818 radius=8;
+    label lbl_song2 564 340 164 24 "crank 2" color=#FFFFFF;
+    label lbl_artist2 564 364 164 20 "Slayyyter" color=#B3B3B3;
+
+    button btn_album3 752 136 180 270 "" color=#181818 radius=8;
+    label lbl_song3 760 340 164 24 "Backwards" color=#FFFFFF;
+    label lbl_artist3 760 364 164 20 "Quavo, T.I." color=#B3B3B3;
+
+    button btn_album4 948 136 180 270 "" color=#181818 radius=8;
+    label lbl_song4 956 340 164 24 "Caught Myself" color=#FFFFFF;
+    label lbl_artist4 956 364 164 20 "Bleachers" color=#B3B3B3;
+
+    button btn_album5 1144 136 180 270 "" color=#181818 radius=8;
+
+    label lbl_showall_t 1340 96 60 24 "Show all" color=#B3B3B3;
+
+    label lbl_popular 360 430 200 40 "Popular artists" color=#FFFFFF;
+
+    button btn_artist1 360 480 180 210 "" color=#181818 radius=105;
+    label lbl_a1name 368 628 164 24 "Drake" color=#FFFFFF;
+    label lbl_a1sub 368 652 164 20 "Artist" color=#B3B3B3;
+
+    button btn_artist2 556 480 180 210 "" color=#181818 radius=105;
+    label lbl_a2name 564 628 164 24 "Kendrick" color=#FFFFFF;
+    label lbl_a2sub 564 652 164 20 "Artist" color=#B3B3B3;
+
+    button btn_artist3 752 480 180 210 "" color=#181818 radius=105;
+    label lbl_a3name 760 628 164 24 "Travis Scott" color=#FFFFFF;
+    label lbl_a3sub 760 652 164 20 "Artist" color=#B3B3B3;
+
+    button btn_artist4 948 480 180 210 "" color=#181818 radius=105;
+    label lbl_a4name 956 628 164 24 "The Weeknd" color=#FFFFFF;
+    label lbl_a4sub 956 652 164 20 "Artist" color=#B3B3B3;
+
+    button btn_artist5 1144 480 180 210 "" color=#181818 radius=105;
+
+    label lbl_showall_a 1340 440 60 24 "Show all" color=#B3B3B3;
+
+    button btn_banner 0 770 1400 80 "" color=#7B2FBE radius=0;
+    label lbl_banner_title 24 780 400 24 "Preview of Spotify" color=#FFFFFF;
+    label lbl_banner_sub 24 806 500 24 "Sign up to get unlimited songs and podcasts with occasional ads." color=#FFFFFF;
+    button btn_signup_banner 1260 788 120 44 "Sign up free" color=#FFFFFF radius=22;
+
+    show;
+}

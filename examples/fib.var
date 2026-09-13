@@ -1,0 +1,30 @@
+fn main() {
+    fn fib(n) {
+        if (n <= 1) {
+            return 1;
+        }
+        return fib(n - 1) + fib(n - 2);
+    }
+
+    fn classify(n) {
+        if (n < 10) {
+            return 1;
+        }
+        if (n == 10) {
+            return 2;
+        }
+        return 3;
+    }
+
+    let z = fib(10);
+    print(z);
+
+    print(classify(4));
+    print(classify(10));
+    print(classify(99));
+}
+
+// recursive fibonacci
+// shows off nested fns, if/else-if chains, comparisons,
+// let, return, and multiple print calls
+// just a wee showcase of varse language doesnt have too much you can use so far but its a wip

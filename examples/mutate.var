@@ -1,0 +1,25 @@
+fn main() {
+    fn count_up(n) {
+        let i = 0;
+        i = i + n;
+        i = i + 1;
+        return i;
+    }
+
+    fn bigger(a + b) {
+        if (a >= b) {
+            return a;
+        }
+        return b;
+    }
+
+    def total: 7;
+
+    print(count_up(5));
+    print(bigger(total + 3));
+    let b = bigger(2 + 9);
+    print(count_up((b + 1)));
+}
+// variables, assignment, and mutation
+// shows let, re-assignment with =, nested functions
+// a function can change a variable it can see

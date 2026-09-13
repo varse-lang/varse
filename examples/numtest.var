@@ -1,0 +1,6 @@
+fn main() {
+    print(197);
+    print(12345);
+    print(10);
+    print(0);
+}
