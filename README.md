@@ -1,4 +1,4 @@
-#Varse
+# Varse
 
 A programming language written from scratch in x86 64 Assembly using NASM.
 
