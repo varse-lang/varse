@@ -93,6 +93,10 @@ Source
 
 https://github.com/varse-lang/varse
 
+Discord
+
+https://discord.gg/GTvzJ2pQaT
+
 Project Status
 
 Varse is still being worked on.
