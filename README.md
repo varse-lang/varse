@@ -4,6 +4,12 @@ A programming language written from scratch in x86 64 Assembly using NASM.
 
 Varse is my attempt at making a programming language that is simple to write while still having a low level foundation. The compiler and runtime are written in Assembly, and the language itself is designed to grow into something capable of both normal programming and lower level system work.
 
+# Donations are accepted
+
+**Cashapp: $p1stn**
+
+**PayPal: @m4rdr**
+
 What Varse Has
 
 Functions
