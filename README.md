@@ -10,7 +10,7 @@ Varse is my attempt at making a programming language that is simple to write whi
 
 **PayPal: @m4rdr**
 
-What Varse Has
+# What Varse Has
 
 Functions
 
@@ -78,7 +78,7 @@ fn main() {
 
 The GUI system uses the Windows APIs underneath instead of relying on a separate web based interface.
 
-Building
+# Building
 
 Varse currently uses NASM and GoLink on Windows.
 
@@ -99,27 +99,27 @@ Every Varse program starts from a main function.
 fn main() {
     print(42);
 }
-Documentation
+# Documentation
 
 The documentation is available here:
 
 https://varse.pages.dev/docs
 
-Website
+# Website
 
 https://varse.pages.dev/
 
-Source
+# Source
 
 https://github.com/varse-lang/varse
 
-Discord
+# Discord
 
 https://discord.gg/GTvzJ2pQaT
 
 Project Status
 
-Varse is still being worked on.
+# Varse is still being worked on.
 
 A lot of the language is still changing, and new features are being added as I build the compiler. The goal is to keep pushing it further while keeping the actual language readable and easy to work with.
 
