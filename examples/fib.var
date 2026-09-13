@@ -23,8 +23,3 @@ fn main() {
     print(classify(10));
     print(classify(99));
 }
-
-// recursive fibonacci
-// shows off nested fns, if/else-if chains, comparisons,
-// let, return, and multiple print calls
-// just a wee showcase of varse language doesnt have too much you can use so far but its a wip
