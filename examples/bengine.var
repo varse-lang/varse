@@ -1,0 +1,681 @@
+fn blkind(i) {
+    if (blocktag(i) == 7) {
+        return 22;
+    }
+    return 0;
+}
+
+fn blkhide(i) {
+    if (blocktag(i) == 7) {
+        return 0;
+    }
+    return 1;
+}
+
+fn blkh(i) {
+    let t = blocktag(i);
+    let l = blocklen(i);
+    let lines = l / 120 + 1;
+    if (t > 0) {
+        if (t < 7) {
+            if (lines > 1) {
+                return lines * 18 + 12;
+            }
+            return 32;
+        }
+        if (t == 8) {
+            return lines * 16 + 14;
+        }
+        if (t == 10) {
+            return 22;
+        }
+    }
+    let h = lines * 17 + 14;
+    if (h < 28) {
+        h = 28;
+    }
+    return h;
+}
+
+fn blkcol(i) {
+    let t = blocktag(i);
+    let c = cssfg();
+    if (c == 0) {
+        c = #222222;
+    }
+    if (t > 0) {
+        if (t < 7) {
+            if (c > 8388607) {
+                return #FFFFFF;
+            }
+            return #000000;
+        }
+        if (t == 8) {
+            return #3C7A3C;
+        }
+    }
+    return c;
+}
+
+fn render() {
+    resetui 9;
+
+    let y = 148;
+    let n = 0;
+    let h = 0;
+    let full = 0;
+    let bg = 0;
+    let fg = 0;
+
+    httpget address;
+    htmltitle title;
+
+    bg = cssbg();
+    if (bg == 0) {
+        bg = #FFFFFF;
+    }
+    setcolor page bg;
+
+    fg = cssfg();
+    if (fg == 0) {
+        fg = #222222;
+    }
+    setcolor title fg;
+
+    n = htmlblocks();
+    setnum status netstatus();
+    setnum stats n;
+
+    if (full == 0) {
+        if (n > 0) {
+            h = blkh(0);
+            button bul0 26 y 6 6 "" radius=3 color=#6E6E77;
+            sethide bul0 blkhide(0);
+            label t0 (24 + blkind(0)) y 1034 - blkind(0) h "" color=#B9B9BD;
+            htmlblock t0 0;
+            setcolor t0 blkcol(0);
+            y = y + h;
+            if (y > 690) {
+                full = 1;
+            }
+        }
+    }
+    if (full == 0) {
+        if (n > 1) {
+            h = blkh(1);
+            button bul1 26 y 6 6 "" radius=3 color=#6E6E77;
+            sethide bul1 blkhide(1);
+            label t1 (24 + blkind(1)) y 1034 - blkind(1) h "" color=#B9B9BD;
+            htmlblock t1 1;
+            setcolor t1 blkcol(1);
+            y = y + h;
+            if (y > 690) {
+                full = 1;
+            }
+        }
+    }
+    if (full == 0) {
+        if (n > 2) {
+            h = blkh(2);
+            button bul2 26 y 6 6 "" radius=3 color=#6E6E77;
+            sethide bul2 blkhide(2);
+            label t2 (24 + blkind(2)) y 1034 - blkind(2) h "" color=#B9B9BD;
+            htmlblock t2 2;
+            setcolor t2 blkcol(2);
+            y = y + h;
+            if (y > 690) {
+                full = 1;
+            }
+        }
+    }
+    if (full == 0) {
+        if (n > 3) {
+            h = blkh(3);
+            button bul3 26 y 6 6 "" radius=3 color=#6E6E77;
+            sethide bul3 blkhide(3);
+            label t3 (24 + blkind(3)) y 1034 - blkind(3) h "" color=#B9B9BD;
+            htmlblock t3 3;
+            setcolor t3 blkcol(3);
+            y = y + h;
+            if (y > 690) {
+                full = 1;
+            }
+        }
+    }
+    if (full == 0) {
+        if (n > 4) {
+            h = blkh(4);
+            button bul4 26 y 6 6 "" radius=3 color=#6E6E77;
+            sethide bul4 blkhide(4);
+            label t4 (24 + blkind(4)) y 1034 - blkind(4) h "" color=#B9B9BD;
+            htmlblock t4 4;
+            setcolor t4 blkcol(4);
+            y = y + h;
+            if (y > 690) {
+                full = 1;
+            }
+        }
+    }
+    if (full == 0) {
+        if (n > 5) {
+            h = blkh(5);
+            button bul5 26 y 6 6 "" radius=3 color=#6E6E77;
+            sethide bul5 blkhide(5);
+            label t5 (24 + blkind(5)) y 1034 - blkind(5) h "" color=#B9B9BD;
+            htmlblock t5 5;
+            setcolor t5 blkcol(5);
+            y = y + h;
+            if (y > 690) {
+                full = 1;
+            }
+        }
+    }
+    if (full == 0) {
+        if (n > 6) {
+            h = blkh(6);
+            button bul6 26 y 6 6 "" radius=3 color=#6E6E77;
+            sethide bul6 blkhide(6);
+            label t6 (24 + blkind(6)) y 1034 - blkind(6) h "" color=#B9B9BD;
+            htmlblock t6 6;
+            setcolor t6 blkcol(6);
+            y = y + h;
+            if (y > 690) {
+                full = 1;
+            }
+        }
+    }
+    if (full == 0) {
+        if (n > 7) {
+            h = blkh(7);
+            button bul7 26 y 6 6 "" radius=3 color=#6E6E77;
+            sethide bul7 blkhide(7);
+            label t7 (24 + blkind(7)) y 1034 - blkind(7) h "" color=#B9B9BD;
+            htmlblock t7 7;
+            setcolor t7 blkcol(7);
+            y = y + h;
+            if (y > 690) {
+                full = 1;
+            }
+        }
+    }
+    if (full == 0) {
+        if (n > 8) {
+            h = blkh(8);
+            button bul8 26 y 6 6 "" radius=3 color=#6E6E77;
+            sethide bul8 blkhide(8);
+            label t8 (24 + blkind(8)) y 1034 - blkind(8) h "" color=#B9B9BD;
+            htmlblock t8 8;
+            setcolor t8 blkcol(8);
+            y = y + h;
+            if (y > 690) {
+                full = 1;
+            }
+        }
+    }
+    if (full == 0) {
+        if (n > 9) {
+            h = blkh(9);
+            button bul9 26 y 6 6 "" radius=3 color=#6E6E77;
+            sethide bul9 blkhide(9);
+            label t9 (24 + blkind(9)) y 1034 - blkind(9) h "" color=#B9B9BD;
+            htmlblock t9 9;
+            setcolor t9 blkcol(9);
+            y = y + h;
+            if (y > 690) {
+                full = 1;
+            }
+        }
+    }
+    if (full == 0) {
+        if (n > 10) {
+            h = blkh(10);
+            button bul10 26 y 6 6 "" radius=3 color=#6E6E77;
+            sethide bul10 blkhide(10);
+            label t10 (24 + blkind(10)) y 1034 - blkind(10) h "" color=#B9B9BD;
+            htmlblock t10 10;
+            setcolor t10 blkcol(10);
+            y = y + h;
+            if (y > 690) {
+                full = 1;
+            }
+        }
+    }
+    if (full == 0) {
+        if (n > 11) {
+            h = blkh(11);
+            button bul11 26 y 6 6 "" radius=3 color=#6E6E77;
+            sethide bul11 blkhide(11);
+            label t11 (24 + blkind(11)) y 1034 - blkind(11) h "" color=#B9B9BD;
+            htmlblock t11 11;
+            setcolor t11 blkcol(11);
+            y = y + h;
+            if (y > 690) {
+                full = 1;
+            }
+        }
+    }
+    if (full == 0) {
+        if (n > 12) {
+            h = blkh(12);
+            button bul12 26 y 6 6 "" radius=3 color=#6E6E77;
+            sethide bul12 blkhide(12);
+            label t12 (24 + blkind(12)) y 1034 - blkind(12) h "" color=#B9B9BD;
+            htmlblock t12 12;
+            setcolor t12 blkcol(12);
+            y = y + h;
+            if (y > 690) {
+                full = 1;
+            }
+        }
+    }
+    if (full == 0) {
+        if (n > 13) {
+            h = blkh(13);
+            button bul13 26 y 6 6 "" radius=3 color=#6E6E77;
+            sethide bul13 blkhide(13);
+            label t13 (24 + blkind(13)) y 1034 - blkind(13) h "" color=#B9B9BD;
+            htmlblock t13 13;
+            setcolor t13 blkcol(13);
+            y = y + h;
+            if (y > 690) {
+                full = 1;
+            }
+        }
+    }
+    if (full == 0) {
+        if (n > 14) {
+            h = blkh(14);
+            button bul14 26 y 6 6 "" radius=3 color=#6E6E77;
+            sethide bul14 blkhide(14);
+            label t14 (24 + blkind(14)) y 1034 - blkind(14) h "" color=#B9B9BD;
+            htmlblock t14 14;
+            setcolor t14 blkcol(14);
+            y = y + h;
+            if (y > 690) {
+                full = 1;
+            }
+        }
+    }
+    if (full == 0) {
+        if (n > 15) {
+            h = blkh(15);
+            button bul15 26 y 6 6 "" radius=3 color=#6E6E77;
+            sethide bul15 blkhide(15);
+            label t15 (24 + blkind(15)) y 1034 - blkind(15) h "" color=#B9B9BD;
+            htmlblock t15 15;
+            setcolor t15 blkcol(15);
+            y = y + h;
+            if (y > 690) {
+                full = 1;
+            }
+        }
+    }
+    if (full == 0) {
+        if (n > 16) {
+            h = blkh(16);
+            button bul16 26 y 6 6 "" radius=3 color=#6E6E77;
+            sethide bul16 blkhide(16);
+            label t16 (24 + blkind(16)) y 1034 - blkind(16) h "" color=#B9B9BD;
+            htmlblock t16 16;
+            setcolor t16 blkcol(16);
+            y = y + h;
+            if (y > 690) {
+                full = 1;
+            }
+        }
+    }
+    if (full == 0) {
+        if (n > 17) {
+            h = blkh(17);
+            button bul17 26 y 6 6 "" radius=3 color=#6E6E77;
+            sethide bul17 blkhide(17);
+            label t17 (24 + blkind(17)) y 1034 - blkind(17) h "" color=#B9B9BD;
+            htmlblock t17 17;
+            setcolor t17 blkcol(17);
+            y = y + h;
+            if (y > 690) {
+                full = 1;
+            }
+        }
+    }
+    if (full == 0) {
+        if (n > 18) {
+            h = blkh(18);
+            button bul18 26 y 6 6 "" radius=3 color=#6E6E77;
+            sethide bul18 blkhide(18);
+            label t18 (24 + blkind(18)) y 1034 - blkind(18) h "" color=#B9B9BD;
+            htmlblock t18 18;
+            setcolor t18 blkcol(18);
+            y = y + h;
+            if (y > 690) {
+                full = 1;
+            }
+        }
+    }
+    if (full == 0) {
+        if (n > 19) {
+            h = blkh(19);
+            button bul19 26 y 6 6 "" radius=3 color=#6E6E77;
+            sethide bul19 blkhide(19);
+            label t19 (24 + blkind(19)) y 1034 - blkind(19) h "" color=#B9B9BD;
+            htmlblock t19 19;
+            setcolor t19 blkcol(19);
+            y = y + h;
+            if (y > 690) {
+                full = 1;
+            }
+        }
+    }
+    if (full == 0) {
+        if (n > 20) {
+            h = blkh(20);
+            button bul20 26 y 6 6 "" radius=3 color=#6E6E77;
+            sethide bul20 blkhide(20);
+            label t20 (24 + blkind(20)) y 1034 - blkind(20) h "" color=#B9B9BD;
+            htmlblock t20 20;
+            setcolor t20 blkcol(20);
+            y = y + h;
+            if (y > 690) {
+                full = 1;
+            }
+        }
+    }
+    if (full == 0) {
+        if (n > 21) {
+            h = blkh(21);
+            button bul21 26 y 6 6 "" radius=3 color=#6E6E77;
+            sethide bul21 blkhide(21);
+            label t21 (24 + blkind(21)) y 1034 - blkind(21) h "" color=#B9B9BD;
+            htmlblock t21 21;
+            setcolor t21 blkcol(21);
+            y = y + h;
+            if (y > 690) {
+                full = 1;
+            }
+        }
+    }
+    if (full == 0) {
+        if (n > 22) {
+            h = blkh(22);
+            button bul22 26 y 6 6 "" radius=3 color=#6E6E77;
+            sethide bul22 blkhide(22);
+            label t22 (24 + blkind(22)) y 1034 - blkind(22) h "" color=#B9B9BD;
+            htmlblock t22 22;
+            setcolor t22 blkcol(22);
+            y = y + h;
+            if (y > 690) {
+                full = 1;
+            }
+        }
+    }
+    if (full == 0) {
+        if (n > 23) {
+            h = blkh(23);
+            button bul23 26 y 6 6 "" radius=3 color=#6E6E77;
+            sethide bul23 blkhide(23);
+            label t23 (24 + blkind(23)) y 1034 - blkind(23) h "" color=#B9B9BD;
+            htmlblock t23 23;
+            setcolor t23 blkcol(23);
+            y = y + h;
+            if (y > 690) {
+                full = 1;
+            }
+        }
+    }
+    if (full == 0) {
+        if (n > 24) {
+            h = blkh(24);
+            button bul24 26 y 6 6 "" radius=3 color=#6E6E77;
+            sethide bul24 blkhide(24);
+            label t24 (24 + blkind(24)) y 1034 - blkind(24) h "" color=#B9B9BD;
+            htmlblock t24 24;
+            setcolor t24 blkcol(24);
+            y = y + h;
+            if (y > 690) {
+                full = 1;
+            }
+        }
+    }
+    if (full == 0) {
+        if (n > 25) {
+            h = blkh(25);
+            button bul25 26 y 6 6 "" radius=3 color=#6E6E77;
+            sethide bul25 blkhide(25);
+            label t25 (24 + blkind(25)) y 1034 - blkind(25) h "" color=#B9B9BD;
+            htmlblock t25 25;
+            setcolor t25 blkcol(25);
+            y = y + h;
+            if (y > 690) {
+                full = 1;
+            }
+        }
+    }
+    if (full == 0) {
+        if (n > 26) {
+            h = blkh(26);
+            button bul26 26 y 6 6 "" radius=3 color=#6E6E77;
+            sethide bul26 blkhide(26);
+            label t26 (24 + blkind(26)) y 1034 - blkind(26) h "" color=#B9B9BD;
+            htmlblock t26 26;
+            setcolor t26 blkcol(26);
+            y = y + h;
+            if (y > 690) {
+                full = 1;
+            }
+        }
+    }
+    if (full == 0) {
+        if (n > 27) {
+            h = blkh(27);
+            button bul27 26 y 6 6 "" radius=3 color=#6E6E77;
+            sethide bul27 blkhide(27);
+            label t27 (24 + blkind(27)) y 1034 - blkind(27) h "" color=#B9B9BD;
+            htmlblock t27 27;
+            setcolor t27 blkcol(27);
+            y = y + h;
+            if (y > 690) {
+                full = 1;
+            }
+        }
+    }
+    if (full == 0) {
+        if (n > 28) {
+            h = blkh(28);
+            button bul28 26 y 6 6 "" radius=3 color=#6E6E77;
+            sethide bul28 blkhide(28);
+            label t28 (24 + blkind(28)) y 1034 - blkind(28) h "" color=#B9B9BD;
+            htmlblock t28 28;
+            setcolor t28 blkcol(28);
+            y = y + h;
+            if (y > 690) {
+                full = 1;
+            }
+        }
+    }
+    if (full == 0) {
+        if (n > 29) {
+            h = blkh(29);
+            button bul29 26 y 6 6 "" radius=3 color=#6E6E77;
+            sethide bul29 blkhide(29);
+            label t29 (24 + blkind(29)) y 1034 - blkind(29) h "" color=#B9B9BD;
+            htmlblock t29 29;
+            setcolor t29 blkcol(29);
+            y = y + h;
+            if (y > 690) {
+                full = 1;
+            }
+        }
+    }
+    if (full == 0) {
+        if (n > 30) {
+            h = blkh(30);
+            button bul30 26 y 6 6 "" radius=3 color=#6E6E77;
+            sethide bul30 blkhide(30);
+            label t30 (24 + blkind(30)) y 1034 - blkind(30) h "" color=#B9B9BD;
+            htmlblock t30 30;
+            setcolor t30 blkcol(30);
+            y = y + h;
+            if (y > 690) {
+                full = 1;
+            }
+        }
+    }
+    if (full == 0) {
+        if (n > 31) {
+            h = blkh(31);
+            button bul31 26 y 6 6 "" radius=3 color=#6E6E77;
+            sethide bul31 blkhide(31);
+            label t31 (24 + blkind(31)) y 1034 - blkind(31) h "" color=#B9B9BD;
+            htmlblock t31 31;
+            setcolor t31 blkcol(31);
+            y = y + h;
+            if (y > 690) {
+                full = 1;
+            }
+        }
+    }
+    if (full == 0) {
+        if (n > 32) {
+            h = blkh(32);
+            button bul32 26 y 6 6 "" radius=3 color=#6E6E77;
+            sethide bul32 blkhide(32);
+            label t32 (24 + blkind(32)) y 1034 - blkind(32) h "" color=#B9B9BD;
+            htmlblock t32 32;
+            setcolor t32 blkcol(32);
+            y = y + h;
+            if (y > 690) {
+                full = 1;
+            }
+        }
+    }
+    if (full == 0) {
+        if (n > 33) {
+            h = blkh(33);
+            button bul33 26 y 6 6 "" radius=3 color=#6E6E77;
+            sethide bul33 blkhide(33);
+            label t33 (24 + blkind(33)) y 1034 - blkind(33) h "" color=#B9B9BD;
+            htmlblock t33 33;
+            setcolor t33 blkcol(33);
+            y = y + h;
+            if (y > 690) {
+                full = 1;
+            }
+        }
+    }
+    if (full == 0) {
+        if (n > 34) {
+            h = blkh(34);
+            button bul34 26 y 6 6 "" radius=3 color=#6E6E77;
+            sethide bul34 blkhide(34);
+            label t34 (24 + blkind(34)) y 1034 - blkind(34) h "" color=#B9B9BD;
+            htmlblock t34 34;
+            setcolor t34 blkcol(34);
+            y = y + h;
+            if (y > 690) {
+                full = 1;
+            }
+        }
+    }
+    if (full == 0) {
+        if (n > 35) {
+            h = blkh(35);
+            button bul35 26 y 6 6 "" radius=3 color=#6E6E77;
+            sethide bul35 blkhide(35);
+            label t35 (24 + blkind(35)) y 1034 - blkind(35) h "" color=#B9B9BD;
+            htmlblock t35 35;
+            setcolor t35 blkcol(35);
+            y = y + h;
+            if (y > 690) {
+                full = 1;
+            }
+        }
+    }
+    if (full == 0) {
+        if (n > 36) {
+            h = blkh(36);
+            button bul36 26 y 6 6 "" radius=3 color=#6E6E77;
+            sethide bul36 blkhide(36);
+            label t36 (24 + blkind(36)) y 1034 - blkind(36) h "" color=#B9B9BD;
+            htmlblock t36 36;
+            setcolor t36 blkcol(36);
+            y = y + h;
+            if (y > 690) {
+                full = 1;
+            }
+        }
+    }
+    if (full == 0) {
+        if (n > 37) {
+            h = blkh(37);
+            button bul37 26 y 6 6 "" radius=3 color=#6E6E77;
+            sethide bul37 blkhide(37);
+            label t37 (24 + blkind(37)) y 1034 - blkind(37) h "" color=#B9B9BD;
+            htmlblock t37 37;
+            setcolor t37 blkcol(37);
+            y = y + h;
+            if (y > 690) {
+                full = 1;
+            }
+        }
+    }
+    if (full == 0) {
+        if (n > 38) {
+            h = blkh(38);
+            button bul38 26 y 6 6 "" radius=3 color=#6E6E77;
+            sethide bul38 blkhide(38);
+            label t38 (24 + blkind(38)) y 1034 - blkind(38) h "" color=#B9B9BD;
+            htmlblock t38 38;
+            setcolor t38 blkcol(38);
+            y = y + h;
+            if (y > 690) {
+                full = 1;
+            }
+        }
+    }
+    if (full == 0) {
+        if (n > 39) {
+            h = blkh(39);
+            button bul39 26 y 6 6 "" radius=3 color=#6E6E77;
+            sethide bul39 blkhide(39);
+            label t39 (24 + blkind(39)) y 1034 - blkind(39) h "" color=#B9B9BD;
+            htmlblock t39 39;
+            setcolor t39 blkcol(39);
+            y = y + h;
+            if (y > 690) {
+                full = 1;
+            }
+        }
+    }
+
+}
+
+fn main() {
+    window "Varse Browser" 1084 782 bg=#17171B;
+
+    input address 20 20 700 40 "https://example.com" radius=8 color=#26262B;
+    button go 732 20 110 40 "Go" radius=8 color=#2864C7;
+    button q1 854 20 100 40 "Wikipedia" radius=8 color=#33333A;
+    button q2 964 20 100 40 "IANA" radius=8 color=#33333A;
+
+    panel page 20 76 1044 636 radius=6 color=#FFFFFF;
+    label title 40 98 1004 34 "" color=#111111;
+    label status 20 722 1044 24 "" color=#8A8A93;
+    label stats 20 748 1044 22 "" color=#5A5A63;
+
+    onclick go {
+        render();
+    };
+
+    onclick q1 {
+        settext address "https://en.wikipedia.org/wiki/Assembly_language";
+        render();
+    };
+
+    onclick q2 {
+        settext address "https://www.iana.org/help/example-domains";
+        render();
+    };
+
+    render();
+    show;
+}
