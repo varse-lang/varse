@@ -46,6 +46,88 @@ Widget manipulation
 
 Standalone executable building
 
+Strings and string operations
+
+String comparison
+
+String concatenation
+
+String conversion
+
+Tables
+
+File I/O
+
+While loops
+
+Blocks and scope
+
+Comments
+
+Native Windows GUI primitives
+
+Fonts
+
+Drawing primitives
+
+Images
+
+Gradients
+
+Circles
+
+Lines
+
+Triangles
+
+Dynamic widget updates
+
+Widget visibility control
+
+UI reset / page rebuilding
+
+WebView2 support
+
+WebView2 HTML/CSS/JS rendering
+
+WebView navigation
+
+WebView JavaScript execution
+
+HTTP response handling
+
+HTML text extraction
+
+HTML title extraction
+
+HTML block inspection
+
+CSS color extraction
+
+Native DLL loading
+
+DLL importing
+
+DLL inclusion
+
+Native function resolution
+
+Native function calls
+
+Native string pointers
+
+Native memory allocation
+
+Direct memory reading
+
+Direct memory writing
+
+Native error handling
+
+Windows API access
+
+Process interaction
+
 x86-64 Assembly based compiler and runtime
 
 Example
