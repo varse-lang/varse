@@ -1,0 +1,22 @@
+fn main() {
+    include @gui;
+    include @webview;
+
+    window "WebView2 Test" 1024 768 bg=#222222;
+
+    input url 20 10 800 36 "https://example.com" radius=6 color=#303033;
+    button go 830 10 120 36 "Go" radius=6 color=#2864C7;
+    button htmltest 960 10 50 36 "HTML" radius=6 color=#333333;
+
+    webview page 20 56 984 696;
+
+    onclick go {
+        navigate page url;
+    };
+
+    onclick htmltest {
+        wvhtml page "<html><body style='background:#1a1a2e;color:#eee;font-family:sans-serif;padding:40px'><h1 style='color:#4fc1ff'>Hello from Varse!</h1><p style='font-size:18px'>This HTML is rendered by WebView2 inside a Varse application.</p><p style='color:#888'>You can embed any HTML, CSS, and JavaScript here.</p></body></html>";
+    };
+
+    show;
+}
